@@ -1,5 +1,7 @@
 import './App.css';
 import styled from 'styled-components';
+import {Button} from "./components/Button";
+import {Xuk} from "./components/Xuk";
 
 
 function App() {
@@ -8,6 +10,12 @@ function App() {
             <Title>Styled-components <span>.attrs</span> method</Title>
 
             <Car topCars={topCars}/>
+            <button onClick={foo1}>1</button>
+            <button onClick={()=>foo2(100200)}>2</button>
+            <Button callBack={foo1} name="My youtube chennel 1"/>
+            <Button callBack={()=>foo2(100500)} name="My youtube chennel 2"/>
+            <Button name={'My youtube chennel 3'} callBack={()=>foo3('Alex', 25)}/>
+            <Xuk/>
             <Form>
                 <Field pad="50px" placeholder="HEllo" title="help"/>
                 <Field/>
@@ -20,6 +28,18 @@ function App() {
 }
 
 export default App;
+
+const foo1 = () => {
+    console.log('100200')
+}
+const foo2 = (cifra: number) => {
+    console.log(cifra);
+}
+const foo3 = (name: string, age: number) => {
+    console.log(name, age);
+}
+
+
 
 
 const topCars = [
