@@ -2,27 +2,29 @@ import './App.css';
 import styled from 'styled-components';
 import {Button} from "./components/Button";
 import {Xuk} from "./components/Xuk";
+import {Obmen} from "./components/Obmen";
 
 
 function App() {
     return (
         <div className="App">
-            <Title>Styled-components <span>.attrs</span> method</Title>
+            {/*<Title>Styled-components <span>.attrs</span> method</Title>*/}
 
-            <Car topCars={topCars}/>
-            <button onClick={foo1}>1</button>
-            <button onClick={()=>foo2(100200)}>2</button>
-            <Button callBack={foo1} name="My youtube chennel 1"/>
-            <Button callBack={()=>foo2(100500)} name="My youtube chennel 2"/>
-            <Button name={'My youtube chennel 3'} callBack={()=>foo3('Alex', 25)}/>
+            {/*<Car topCars={topCars}/>*/}
+            {/*<button onClick={foo1}>1</button>*/}
+            {/*<button onClick={()=>foo2(100200)}>2</button>*/}
+            {/*<Button callBack={foo1} name="My youtube chennel 1"/>*/}
+            {/*<Button callBack={()=>foo2(100500)} name="My youtube chennel 2"/>*/}
+            {/*<Button name={'My youtube chennel 3'} callBack={()=>foo3('Alex', 25)}/>*/}
             <Xuk/>
-            <Form>
-                <Field pad="50px" placeholder="HEllo" title="help"/>
-                <Field/>
-                <Field/>
+            <Obmen/>
+            {/*<Form>*/}
+            {/*    <Field pad="50px" placeholder="HEllo" title="help"/>*/}
+            {/*    <Field/>*/}
+            {/*    <Field/>*/}
 
-                <Checkbox/>
-            </Form>
+            {/*    <Checkbox/>*/}
+            {/*</Form>*/}
         </div>
     );
 }
