@@ -31,7 +31,8 @@ export const Obmen = () => {
         setNameButton(nameButton)
     }
     return (
-     <ObmenMex currentMoney={currentMoney} onClickFilterHandler={onClickFilterHandler}/>
+        <ObmenMex currentMoney={currentMoney}
+                  onClickFilterHandler={onClickFilterHandler}/>
     );
 };
 
