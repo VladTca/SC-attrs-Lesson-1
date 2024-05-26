@@ -1,6 +1,6 @@
 //примитивы
 //
-
+// test
 //ссылочные
 //object, array, functions
 
