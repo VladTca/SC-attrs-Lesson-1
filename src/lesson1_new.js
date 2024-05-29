@@ -16,41 +16,41 @@
 //   name: 'Bob',
 //   isStudent: true,
 // };
-
+//
 // const users2 = users1; ////#123456
 // users2.isStudent = false;
 // // console.log('users2: ', users2); //users2:  { id: 1, name: 'Bob', isStudent: true }
 // console.log('users1: ', users1); //users1:  { id: 1, name: 'Bob', isStudent: false }
 // console.log('users2: ', users2);
-
+//
 // console.log(users1 === users2);//true
-
+//
 // const users1 = {
 //   //#123456
 //   id: 1,
 //   name: 'Bob',
 //   isStudent: true,
 // };
-
+//
 // const users2 = {
 //   // #890--99876
 //   id: users1.id,
 //   name: users1.name,
 //   isStudent: users1.isStudent,
 // };
-
+//
 // console.log(users1 === users2); //false
 // console.log(users1 == users2); //false
-
+//
 // const a = {
 //   //#111
 //   id: '1',
 //   name: 'Bob',
 // };
-
+//
 // const b = a; //#111
 // b.name = 'Alex';
-
+//
 // console.log(a === b);
 // console.log(a); //{ id: '1', name: 'Alex' }
 
@@ -118,10 +118,10 @@
 //     isStudent: true,
 //   },
 // ];
-
+//
 // const result = users.pop();
 // console.log('users: ', users);
-
+//
 // const result1 = [...users].pop();
 // console.log('users: ', users);
 
@@ -312,12 +312,105 @@
 // const arr = [];
 // const [testVal] = arr;
 // console.log(testVal); //undefined
-
+//
 // const arr = [1, 2, 3, 4, 5, 6, 7, 8];
-
+//
 // function Hello([firstValue, ...rest]) {
 //   console.log(firstValue);
 //   console.log(rest);
 // }
-
+//
 // Hello(arr);
+
+//
+// const a = {};
+// const b = {};
+// const c = a;
+// const d = c;
+//
+// console.log(a === b);
+// console.log(a === c);
+// console.log(c === d);
+// console.log(a === d);
+
+//
+// const a = {};
+// const b = a;
+// b['test'] = 'test value';
+//
+// console.log(b === a);
+// console.log(a);
+// // смутриурет ли объект a? ya))
+
+//     const user = {
+//         name: 'John',
+//         address: {
+//             city: 'New York',
+//             country: 'USA',
+//         },
+//     };
+// let updatedUser={...user,address:{...user.address,city:'Toronto'}};
+//     console.log(updatedUser);
+//     // Ожидаемый вывод: { name: 'John', address: { city: 'Toronto', country: 'USA' } }
+// -------------------------------
+//
+//     const originalArray = [1, 2, 3, 4, 5];
+//     const newArray = addElementToArray(originalArray, 6);
+//
+//     function addElementToArray(array, element) {
+//         return [...array, element];
+//     }
+//
+//     console.log(newArray);
+//     // Ожидаемый вывод: [1, 2, 3, 4, 5, 6]
+
+//     const user = { name: 'John', age: 25, city: 'New York' };
+// const { name,age,city}=user;
+//
+//     console.log(name);  // 'John'
+//     console.log(age);   // 25
+//     console.log(city);  // 'New York'
+//
+//     const fruits = ['apple', 'banana', 'orange'];
+//     const [firstFruit, secondFruit, thirdFruit] = fruits;
+//     console.log(firstFruit); // 'apple'
+//     console.log(secondFruit); // 'banana'
+//     console.log(thirdFruit); // 'orange'
+
+
+// const person = { name: 'Alice', age: 30 };
+//
+// // Деструктуризация в параметрах функции
+// function printPersonDetails({name,age}=person) {
+//     console.log(`Name: ${name}, Age: ${age}`);
+// }
+//
+// printPersonDetails(person);  // Вывод: Name: Alice, Age: 30
+//
+//     const car = { brand: 'Toyota', model: 'Camry' };
+// const {brand,model,year=2022}=car;
+//
+//     console.log(brand);  // 'Toyota'
+//     console.log(model);  // 'Camry'
+//     console.log(year);   // 2022 (значение по умолчанию)
+
+
+//     const students = [
+//         { name: 'Alex', grade: 'A' },
+//         { name: 'Emma', grade: 'B' },
+//         { name: 'Chris', grade: 'C' },
+//     ];
+// const [student1,student2,student3]=students;
+//     console.log(student1);  // 'Alex'
+//     console.log(student3);  // 'Chris'
+
+
+const person = {firstName: 'Max', lastName: 'Johnson'};
+const {firstName: vorname, lastName: nachname, age = 25} = person;
+const firstName = 'first Name: Nina';
+const lastName = 'last Name: Ivanov';
+
+
+console.log(vorname); // 'Max'
+console.log(nachname); // 'Johnson'
+console.log(age); // 25 (значение по умолчанию)
