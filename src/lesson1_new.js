@@ -405,12 +405,12 @@
 //     console.log(student3);  // 'Chris'
 
 
-const person = {firstName: 'Max', lastName: 'Johnson'};
-const {firstName: vorname, lastName: nachname, age = 25} = person;
-const firstName = 'first Name: Nina';
-const lastName = 'last Name: Ivanov';
-
-
-console.log(vorname); // 'Max'
-console.log(nachname); // 'Johnson'
-console.log(age); // 25 (значение по умолчанию)
+// const person = {firstName: 'Max', lastName: 'Johnson'};
+// const {firstName: vorname, lastName: nachname, age = 25} = person;
+// const firstName = 'first Name: Nina';
+// const lastName = 'last Name: Ivanov';
+//
+//
+// console.log(vorname); // 'Max'
+// console.log(nachname); // 'Johnson'
+// console.log(age); // 25 (значение по умолчанию)
